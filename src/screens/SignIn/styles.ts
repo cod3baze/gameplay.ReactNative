@@ -20,13 +20,17 @@ export const styles = StyleSheet.create({
   title: {
     textAlign: "center",
     fontSize: 40,
+    lineHeight: 40,
     marginBottom: 16,
     color: theme.colors.heading,
+    fontFamily: theme.fonts.title700,
   },
   subtitle: {
     textAlign: "center",
     fontSize: 15,
+    lineHeight: 25,
     marginBottom: 64,
     color: theme.colors.heading,
+    fontFamily: theme.fonts.title500,
   },
 });

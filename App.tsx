@@ -1,6 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { Alert, View } from "react-native";
-import { StatusBar } from "expo-status-bar";
+import { Alert, View, StatusBar } from "react-native";
 import * as SplashScreen from "expo-splash-screen";
 
 import { loadAsync } from "expo-font";
@@ -54,7 +53,12 @@ export default function App() {
   return (
     <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
       <SignIn />
-      <StatusBar style="auto" />
+
+      <StatusBar
+        barStyle="light-content"
+        backgroundColor="transparent"
+        translucent
+      />
     </View>
   );
 }
