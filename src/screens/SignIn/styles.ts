@@ -5,9 +5,9 @@ import { theme } from "../../global/styles/theme";
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: theme.colors.secondary100,
     alignItems: "center",
     justifyContent: "center",
+    // backgroundColor: theme.colors.secondary100,
   },
   image: {
     width: "100%",

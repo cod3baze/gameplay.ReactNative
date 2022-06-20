@@ -10,6 +10,7 @@ import {
 } from "@expo-google-fonts/rajdhani";
 
 import { SignIn } from "./src/screens/SignIn";
+import { LinearBackground } from "./src/components/LinearBackground";
 
 export default function App() {
   const [appIsReady, setAppIsReady] = useState<boolean>(false);
@@ -52,13 +53,15 @@ export default function App() {
 
   return (
     <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
-      <SignIn />
-
       <StatusBar
         barStyle="light-content"
         backgroundColor="transparent"
         translucent
       />
+
+      <LinearBackground>
+        <SignIn />
+      </LinearBackground>
     </View>
   );
 }
