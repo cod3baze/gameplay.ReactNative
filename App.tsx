@@ -10,6 +10,7 @@ import {
 } from "@expo-google-fonts/rajdhani";
 
 import { SignIn } from "./src/screens/SignIn";
+import { Home } from "./src/screens/Home";
 import { LinearBackground } from "./src/components/LinearBackground";
 
 export default function App() {
@@ -60,7 +61,7 @@ export default function App() {
       />
 
       <LinearBackground>
-        <SignIn />
+        <Home />
       </LinearBackground>
     </View>
   );
