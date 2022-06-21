@@ -1,3 +1,5 @@
+import "react-native-gesture-handler";
+
 import React, { useCallback, useEffect, useState } from "react";
 import { Alert, View, StatusBar } from "react-native";
 import * as SplashScreen from "expo-splash-screen";
@@ -9,9 +11,7 @@ import {
   Rajdhani_500Medium,
 } from "@expo-google-fonts/rajdhani";
 
-import { SignIn } from "./src/screens/SignIn";
-import { Home } from "./src/screens/Home";
-import { LinearBackground } from "./src/components/LinearBackground";
+import { AppRoutes } from "./src/routes";
 
 export default function App() {
   const [appIsReady, setAppIsReady] = useState<boolean>(false);
@@ -60,9 +60,7 @@ export default function App() {
         translucent
       />
 
-      <LinearBackground>
-        <Home />
-      </LinearBackground>
+      <AppRoutes />
     </View>
   );
 }

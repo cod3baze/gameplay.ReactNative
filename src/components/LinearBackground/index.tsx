@@ -4,7 +4,7 @@ import { styles } from "./styles";
 import { theme } from "../../global/styles/theme";
 
 type LinearBackgroundProps = {
-  children: any;
+  children?: any;
 };
 
 export function LinearBackground({ children }: LinearBackgroundProps) {
