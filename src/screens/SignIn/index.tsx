@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { Text, View, Image } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 import { styles } from "./styles";
 
@@ -8,6 +9,12 @@ import { ButtonIcon } from "../../components/ButtonIcon";
 import IllustrationPNG from "../../assets/illustration.png";
 
 export function SignIn() {
+  const { navigate } = useNavigation();
+
+  const handleSignIn = useCallback(() => {
+    navigate("Home");
+  }, []);
+
   return (
     <View style={styles.container}>
       <Image
@@ -26,7 +33,7 @@ export function SignIn() {
           favoritos com seus amigos!
         </Text>
 
-        <ButtonIcon activeOpacity={0.7} />
+        <ButtonIcon onPress={handleSignIn} />
       </View>
     </View>
   );
