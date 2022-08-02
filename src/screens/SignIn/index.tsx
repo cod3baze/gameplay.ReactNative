@@ -7,6 +7,7 @@ import { styles } from "./styles";
 import { ButtonIcon } from "../../components/ButtonIcon";
 
 import IllustrationPNG from "../../assets/illustration.png";
+import { RectButton } from "react-native-gesture-handler";
 
 export function SignIn() {
   const { navigate } = useNavigation();
@@ -25,15 +26,23 @@ export function SignIn() {
 
       <View style={styles.content}>
         <Text style={styles.title}>
-          Conecte-se {"\n"}e organize suas {"\n"}
+          Conecte-se {"\n"}e marque suas {"\n"}
           Jogatinas
         </Text>
         <Text style={styles.subtitle}>
-          Crie grupos para jogar seus games {"\n"}
-          favoritos com seus amigos!
+          Crie Equipas para marcar partidas de{"\n"}
+          futebol com seus amigos!
         </Text>
 
-        <ButtonIcon onPress={handleSignIn} />
+        <ButtonIcon />
+
+        <RectButton
+          onPress={handleSignIn}
+          activeOpacity={0.9}
+          style={styles.searchTeams}
+        >
+          <Text style={styles.searchTeamsText}>buscar equipas</Text>
+        </RectButton>
       </View>
     </View>
   );

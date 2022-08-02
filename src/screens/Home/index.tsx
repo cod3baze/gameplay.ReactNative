@@ -1,14 +1,15 @@
 import React, { useCallback, useState } from "react";
-import { FlatList, View } from "react-native";
+import { FlatList, View, Text } from "react-native";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import { ButtonAdd } from "../../components/buttons/Add";
 import { CategorySelect } from "../../components/CategorySelect";
 import { ListHeader } from "../../components/ListHeader";
-import { Profile } from "../../components/Profile";
 import { Appointment } from "../../components/Appointment";
 import { AppointmentDTO } from "../../dtos/appointment";
 
 import { styles } from "./styles";
+import { RectButton } from "react-native-gesture-handler";
 
 const appointments = [
   {
@@ -45,7 +46,14 @@ export function Home() {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Profile />
+        <RectButton style={styles.addTeams}>
+          <MaterialCommunityIcons
+            name="form-select"
+            size={24}
+            color="#DEDEDE"
+          />
+          <Text style={styles.addTeamsText}>Cadastrar equipas</Text>
+        </RectButton>
         <ButtonAdd />
       </View>
 

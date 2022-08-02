@@ -33,4 +33,21 @@ export const styles = StyleSheet.create({
     color: theme.colors.heading,
     fontFamily: theme.fonts.title500,
   },
+  searchTeams: {
+    justifyContent: "center",
+    width: 200,
+    height: 40,
+    borderRadius: 8,
+    marginVertical: 10,
+    backgroundColor: "transparent",
+  },
+  searchTeamsText: {
+    textAlign: "left",
+    fontSize: 19,
+    textDecorationStyle: "solid",
+    textDecorationLine: "underline",
+    textDecorationColor: theme.colors.secondary40,
+    color: theme.colors.secondary30,
+    fontFamily: theme.fonts.title500,
+  },
 });
